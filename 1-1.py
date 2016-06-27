@@ -1,3 +1,4 @@
+# author: misky
 while(True):
 	temp = input("Please input the number you guess(1-100): ")
 	guess = int(temp)
