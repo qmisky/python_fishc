@@ -7,22 +7,30 @@ class A():
 class B(A):
     def __init__(self):
         print("进入B…")
-        A.__init__(self)
+        super().__init__()
         print("离开B…")
 
 
 class C(A):
     def __init__(self):
         print("进入C…")
-        A.__init__(self)
+        super().__init__()
         print("离开C…")
 
 
 class D(B, C):
     def __init__(self):
         print("进入D…")
-        B.__init__(self)
-        C.__init__(self)
+        super().__init__()
         print("离开D…")
 
-d=D()
+d = D()
+# 进入D…
+# 进入B…
+# 进入C…
+# 进入A…
+# 离开A…
+# 离开C…
+# 离开B…
+# 离开D…
+
